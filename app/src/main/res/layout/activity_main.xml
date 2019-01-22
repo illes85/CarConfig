@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/dacia_duster_gray_leftside" />
+        -->
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/textview_model" />
+
+    <TextView
+        android:id="@+id/textview_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Price: 0 &#8364;"
+        android:textColor="@android:color/white"
+        android:textSize="26sp" />
+
+    <Button
+        android:id="@+id/button_music"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="8dp"
+        android:gravity="center"
+        android:text="Music ON"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button_color"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_music"
+        android:layout_alignParentRight="true"
+        android:layout_margin="8dp"
+        android:gravity="center"
+        android:onClick="notImplemented"
+        android:text="Color"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textview_model"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/headingBackground"
+        android:gravity="center|left"
+        android:onClick="changeModel"
+        android:paddingHorizontal="16dp"
+        android:text="DUSTER"
+        android:textColor="@android:color/black"
+        android:textSize="36sp" />
+
+    <TextView
+        android:id="@+id/textview_engine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="170dp"
+        android:layout_marginBottom="6dp"
+        android:gravity="left"
+        android:onClick="changeEngine"
+        android:text="ENGINE:\ngas 90hp" />
+
+    <TextView
+        android:id="@+id/textview_drive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="280dp"
+        android:layout_marginBottom="6dp"
+        android:gravity="left"
+        android:onClick="changeDrive"
+        android:text="DRIVE\n4 x 2" />
+
+</RelativeLayout>
